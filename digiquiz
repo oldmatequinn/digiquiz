@@ -1,0 +1,7 @@
+class Question:
+
+
+    NAME = str(input("hello, what is your name? "))
+    print("hello", NAME )
+    print("today we will test your math skills with" 
+          " questions that vary from easy to hard. ")
