@@ -1,0 +1,41 @@
+class Question:
+
+
+    NAME = str(input("hello, what is your name? "))
+    print("hello", NAME )
+    print("today we will test your math skills with" 
+          " questions that vary from easy to hard. ")
+
+
+    def __init__(self, prompt, answer):
+        self.prompt = prompt
+        self.answer = answer
+
+
+# asked questions
+question_prompts = [
+    "What is 7 + 14?\n(a) 22\n(b) 19\n(c) 21",
+    "What is 4 X 9?\n(a) 36\n(b) 27\n(c) 33",
+    "What is 13 + x = 37?\n(a) x=14\n(b) x=24\n(c) x=18",
+
+]
+
+# question answers
+questions = [
+    Question(question_prompts[0], "c"),
+    Question(question_prompts[1], "a"),
+    Question(question_prompts[2], "b"),
+
+
+]
+
+
+def run_quiz(questions):
+    score = 0
+    for question in questions:
+        answer = input(question.prompt + "\n").lower()
+
+
+
+
+run_quiz(questions)
