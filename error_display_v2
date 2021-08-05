@@ -1,0 +1,22 @@
+class Question:
+
+    def abc(questions):
+        error = "please answer with a, b, or c"
+        valid = False
+        while not valid:
+            input(questions).lower()
+
+            if questions == "a" or questions == "A":
+                response = "a"
+                return questions
+
+            elif questions == "b" or questions == "B":
+                response = "b"
+                return questions
+
+            elif questions == "c" or questions == "C":
+                response = "c"
+                return questions
+
+            else:
+                print(error)
