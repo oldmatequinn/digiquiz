@@ -1,0 +1,23 @@
+class Question:
+
+    def abc(questions):
+        valid = False
+        while not valid:
+            response = input(questions).lower()
+
+            if response == "a" or response == "b" or response == "c":
+                response = "yes"
+                return questions
+
+            else:
+                print("Please answer a, b, or c")
+
+    Name = str(input("hello, what is your name? "))
+    print("hello", Name )
+    print("today we will test your math skills with" 
+          " questions that vary from easy to hard. ")
+
+
+    def __init__(self, prompt, answer):
+        self.prompt = prompt
+        self.answer = answer
