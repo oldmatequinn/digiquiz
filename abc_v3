@@ -1,0 +1,55 @@
+class Question:
+
+
+    NAME = str(input("hello, what is your name? "))
+    print("hello", NAME )
+
+
+
+    def __init__(self, prompt, answer):
+        self.prompt = prompt
+        self.answer = answer
+
+
+# asked questions
+question_prompts = [
+    "What is 7 + 14?\n(a) 22\n(b) 19\n(c) 21",
+    "What is 4 X 9?\n(a) 36\n(b) 27\n(c) 33",
+    "What is 13 + x = 37?\n(a) x=14\n(b) x=24\n(c) x=18",
+    "what is 5.31579 to the nearest hundredth?\n(a) 5.32\n(b) 5.316\n(c) 6.32",
+    "What is x, 2x = 10?\n(a) x=4\n(b) x=5\n(c) x=6",
+    "What is 5³+30?\n(a) 155\n(b) 100\n(c) 185",
+    "What are the first 5 digits of pi 𝜋?\n(a) 3.1459\n(b) 3.1591\n(c) 3.1415 ",
+    "What is the formula for a circle?\n(a) A=3r²\n(b) V=𝜋r²\n(c) A=𝜋r²",
+    "What is the formula for a sphere?\n(a) V=𝜋r³\n(b) V=4/3𝜋r³\n(c) V=3/4𝜋r³",
+    "What is 31°?\n(a) 62\n(b) 31\n(c) 1"
+]
+
+# question answers
+questions = [
+    Question(question_prompts[0], "c"),
+    Question(question_prompts[1], "a"),
+    Question(question_prompts[2], "b"),
+    Question(question_prompts[3], "a"),
+    Question(question_prompts[4], "b"),
+    Question(question_prompts[5], "a"),
+    Question(question_prompts[6], "c"),
+    Question(question_prompts[7], "c"),
+    Question(question_prompts[8], "b"),
+    Question(question_prompts[9], "c")
+
+]
+
+
+
+def run_quiz(questions):
+    score = 0
+    for question in questions:
+        answer = input(question.prompt + "\n").lower()
+        if answer == question.answer:
+            score += 1
+    print("you got", score, "out of", len(questions))
+
+
+
+run_quiz(questions)
