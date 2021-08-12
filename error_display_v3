@@ -1,0 +1,41 @@
+class Question:
+
+    # correction abc
+    def question_prompts(questions):
+        error = "please answer with a, b, or c"
+        valid = False
+        while not valid:
+            input(questions).lower()
+
+            if questions == "a" or questions == "A":
+                response = "a"
+
+
+
+            elif questions == "b" or questions == "B":
+                response = "b"
+
+
+            elif questions == "c" or questions == "C":
+                response = "c"
+
+
+            else:
+                print(error)
+
+    # correction yes no
+    def abc(question):
+        valid = False
+        while not valid:
+            response = input(question).lower()
+
+            if response == "yes" or response == "y":
+                response = "yes"
+                return response
+
+            elif response == "no" or response == "n":
+                response = "no"
+                return response
+
+            else:
+                print("Please answer yes / no")
